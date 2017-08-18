@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1503019177 source:c:\users\wesley\music\tp_xadrez_v2\xadrez_v2.cpp
+	<iostream>
+	<cstdlib>
+	<allegro.h>
+	"CPecas.h"
+	"CPeao.h"
+	"CCavalo.h"
+	"CBispo.h"
+	"CTorre.h"
+	"CDama.h"
+	"CRei.h"
+	"CTabuleiro.h"
+	"CXadrez.h"
+
+1502987355 source:c:\users\wesley\music\tp_xadrez_v2\cpecas.cpp
+	"CPecas.h"
+
+1502987682 c:\users\wesley\music\tp_xadrez_v2\cpecas.h
+
+1502987827 source:c:\users\wesley\music\tp_xadrez_v2\cpeao.cpp
+	"CPeao.h"
+
+1502988228 c:\users\wesley\music\tp_xadrez_v2\cpeao.h
+	"CPecas.h"
+
+1502988276 source:c:\users\wesley\music\tp_xadrez_v2\ccavalo.cpp
+	"CCavalo.h"
+
+1502988249 c:\users\wesley\music\tp_xadrez_v2\ccavalo.h
+	"CPecas.h"
+
+1502988530 source:c:\users\wesley\music\tp_xadrez_v2\cbispo.cpp
+	"CBispo.h"
+
+1502988500 c:\users\wesley\music\tp_xadrez_v2\cbispo.h
+	"CPecas.h"
+
+1502988800 source:c:\users\wesley\music\tp_xadrez_v2\ctorre.cpp
+	"CTorre.h"
+
+1502988744 c:\users\wesley\music\tp_xadrez_v2\ctorre.h
+	"CPecas.h"
+
+1502989071 source:c:\users\wesley\music\tp_xadrez_v2\cdama.cpp
+	"CDama.h"
+
+1502989032 c:\users\wesley\music\tp_xadrez_v2\cdama.h
+	"CPecas.h"
+
+1502989433 source:c:\users\wesley\music\tp_xadrez_v2\crei.cpp
+	"CRei.h"
+
+1502989374 c:\users\wesley\music\tp_xadrez_v2\crei.h
+	"CPecas.h"
+
+1503005438 source:c:\users\wesley\music\tp_xadrez_v2\ctabuleiro.cpp
+	<iostream>
+	<cstdlib>
+	<allegro.h>
+	"CTabuleiro.h"
+	"CPecas.h"
+	"CPeao.h"
+	"CCavalo.h"
+	"CBispo.h"
+	"CTorre.h"
+	"CDama.h"
+	"CRei.h"
+
+1502989660 c:\users\wesley\music\tp_xadrez_v2\ctabuleiro.h
+	"CPecas.h"
+
+1503022853 source:c:\users\wesley\music\tp_xadrez_v2\cxadrez.cpp
+	<iostream>
+	<cstdlib>
+	<allegro.h>
+	"CTabuleiro.h"
+	"CPecas.h"
+	"CPeao.h"
+	"CCavalo.h"
+	"CBispo.h"
+	"CTorre.h"
+	"CDama.h"
+	"CRei.h"
+	"CXadrez.h"
+
+1502990428 c:\users\wesley\music\tp_xadrez_v2\cxadrez.h
+
+1503019177 source:c:\users\wesley\music\tp_xadrez_v2\main.cpp
+	<iostream>
+	<cstdlib>
+	<allegro.h>
+	"CPecas.h"
+	"CPeao.h"
+	"CCavalo.h"
+	"CBispo.h"
+	"CTorre.h"
+	"CDama.h"
+	"CRei.h"
+	"CTabuleiro.h"
+	"CXadrez.h"
+
