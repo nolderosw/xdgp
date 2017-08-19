@@ -209,34 +209,38 @@ CPecas* CTabuleiro::Promocao(int clique2X, int clique2Y){
     char pecapromocao, corpromocao = ATObjetos[clique2X][clique2Y]->GetCor();
     bool bsaida = false;
     while (!bsaida){
+        FONT *font1 = load_font("font1.pcx", NULL, NULL);
+        FONT *font3 = load_font("font3.pcx", NULL, NULL);
+        textprintf_ex(screen, font1, 570, 140, makecol(255, 0, 0),-1, "PROMOCAO!!");
+        textprintf_ex(screen, font3, 550, 310, makecol(255, 255, 255),-1, "Observe o prompt!");
         cout<<"Voce conseguiu promover um Peao!"<<endl<<"Digite a primeira letra da nova peca(Dama, Bispo, Cavalo, Torre, Peao): ";
         cin>>pecapromocao;
         try{
-        if(pecapromocao != 'D' && pecapromocao != 'B' && pecapromocao != 'C' && pecapromocao != 'T' && pecapromocao != 'P'){
+        if(pecapromocao != 'D' && pecapromocao != 'd' && pecapromocao != 'B' && pecapromocao != 'b' && pecapromocao != 'C' && pecapromocao != 'c' &&  pecapromocao != 'T' && pecapromocao != 't' && pecapromocao != 'P' && pecapromocao != 't'){
             throw(pecapromocao);
         }
 
-        if(pecapromocao=='D'){
+        if(pecapromocao=='D' || pecapromocao=='d'){
             OBJpromocao = new CDama(corpromocao);
             bsaida = true;
             return OBJpromocao;
         }
-        if(pecapromocao=='B'){
+        if(pecapromocao=='B'|| pecapromocao=='b'){
             OBJpromocao = new CBispo(corpromocao);
             bsaida = true;
             return OBJpromocao;
         }
-        if(pecapromocao=='C'){
+        if(pecapromocao=='C'|| pecapromocao=='c'){
             OBJpromocao = new CCavalo(corpromocao);
             bsaida = true;
             return OBJpromocao;
         }
-        if(pecapromocao=='T'){
+        if(pecapromocao=='T'|| pecapromocao=='t'){
             OBJpromocao = new CTorre(corpromocao);
             bsaida = true;
             return OBJpromocao;
         }
-        if(pecapromocao=='P'){
+        if(pecapromocao=='P'|| pecapromocao=='p'){
             OBJpromocao = new CPeao(corpromocao);
             bsaida = true;
             return OBJpromocao;

@@ -54,7 +54,7 @@
 1502989374 c:\users\wesley\music\tp_xadrez_v2\crei.h
 	"CPecas.h"
 
-1503005438 source:c:\users\wesley\music\tp_xadrez_v2\ctabuleiro.cpp
+1503166671 source:c:\users\wesley\music\tp_xadrez_v2\ctabuleiro.cpp
 	<iostream>
 	<cstdlib>
 	<allegro.h>
