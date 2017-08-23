@@ -63,24 +63,52 @@ void CXadrez::Afinaliza(){
 void CXadrez::Aabretabuleiro(){
     show_mouse(screen);
 
-    BITMAP* buffer, *tela_inicial;
+    BITMAP* buffer, *tela_inicial, *regra1, *regra2;
     buffer = create_bitmap(804, 504);
     clear_bitmap(buffer);
 
     tela_inicial = load_bitmap("Sprites/start.bmp", NULL);
+    regra1 = load_bitmap("Sprites/regras1.bmp", NULL);
+    regra2 = load_bitmap("Sprites/regras2.bmp", NULL);
     blit(tela_inicial, buffer, 0, 0, 0, 0, MAX_X, MAX_Y);
     blit(buffer, screen, 0, 0, 0, 0, MAX_X, MAX_Y);
-    bool flag = false;
+    bool flag = false, tela1 = true, tela2 = false, tela3 = false;
     MIDI *musica_inicio;
     SAMPLE *start;
     musica_inicio = load_midi("Songs/inicio.mid");
     start = load_sample("Songs/start.wav");
     play_midi(musica_inicio, TRUE);
     do{
-       if((mouse_b & 1) && (mouse_x<= 498) && (mouse_x>=258) && (mouse_y<=427) && (mouse_y>=370)){
+        //cout<<"x: "<<mouse_x<<"y: "<<mouse_y<<endl;
+       if((mouse_b & 1) && (mouse_x<= 498) && (mouse_x>=258) && (mouse_y<=427) && (mouse_y>=370) && tela1 == true){
             stop_midi();
             flag = true;
         }
+
+       if((mouse_b & 1) && (mouse_x<= 483) && (mouse_x>=316) && (mouse_y<=339) && (mouse_y>=305) && tela1 == true){
+            tela2 = true;
+            tela1 = false;
+            clear_bitmap(buffer);
+            blit(regra1, buffer, 0, 0, 0, 0, MAX_X, MAX_Y);
+            blit(buffer, screen, 0, 0, 0, 0, MAX_X, MAX_Y);
+        }
+        if((mouse_b & 1) && (mouse_x<= 740) && (mouse_x>=698) && (mouse_y<=458) && (mouse_y>=415) && tela2 == true){
+            tela2 = false;
+            tela1 = false;
+            tela3 = true;
+            clear_bitmap(buffer);
+            blit(regra2, buffer, 0, 0, 0, 0, MAX_X, MAX_Y);
+            blit(buffer, screen, 0, 0, 0, 0, MAX_X, MAX_Y);
+        }
+        if((mouse_b & 1) && (mouse_x<= 781) && (mouse_x>=747) && (mouse_y<=489) && (mouse_y>=462) && tela3 == true){
+            tela2 = false;
+            tela1 = true;
+            tela3 = false;
+            clear_bitmap(buffer);
+            blit(tela_inicial, buffer, 0, 0, 0, 0, MAX_X, MAX_Y);
+            blit(buffer, screen, 0, 0, 0, 0, MAX_X, MAX_Y);
+        }
+
     }while(!flag);
     play_sample(start, 255, 128, 1000, FALSE);
     int tempo = clock();

@@ -70,7 +70,7 @@
 1502989660 c:\users\wesley\music\tp_xadrez_v2\ctabuleiro.h
 	"CPecas.h"
 
-1503022853 source:c:\users\wesley\music\tp_xadrez_v2\cxadrez.cpp
+1503447813 source:c:\users\wesley\music\tp_xadrez_v2\cxadrez.cpp
 	<iostream>
 	<cstdlib>
 	<allegro.h>
